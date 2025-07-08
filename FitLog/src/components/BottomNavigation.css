@@ -1,0 +1,34 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  z-index: 1000;
+  font-size: 28px;
+  color: black;
+  padding: 0 1rem;
+}
+
+/* Einheitlicher Hover-/Tap-Effekt wie Sidebar */
+.bottom-nav > * {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.bottom-nav > *:hover {
+  transform: scale(1.2);
+  color: #75cdc8;
+}
+
+/* ❌ Nicht auf Desktop zeigen */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}

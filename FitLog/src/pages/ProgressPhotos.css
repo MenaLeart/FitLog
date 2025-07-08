@@ -1,0 +1,113 @@
+/* Abstand zum Titel */
+.welcome-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Container für alle Fotoeinträge */
+.photo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Einzelner Fotoeintrag */
+.photo-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Obere Zeile mit Datum + Button */
+.photo-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Datum */
+.photo-date {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Linie unter Header */
+.photo-full-divider {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Outline-Button für "New Picture" */
+.new-picture-outline-button {
+  background: transparent;
+  color: #49cfc7;
+  border: 2px solid #49cfc7;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Wrapper für Bild + Icon */
+.photo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Bild selbst */
+.progress-photo {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Papierkorb-Icon */
+.delete-photo-icon {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  font-size: 22px;
+  color: #888;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-photo-icon:hover {
+  color: #d9534f;
+}
+
+/* Kein Eintrag vorhanden */
+.no-training-text {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Button im leeren Zustand */
+.new-picture-button-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.new-picture-outline-button.centered {
+  background: transparent;
+  color: #49cfc7;
+  border: 2px solid #49cfc7;
+  padding: 0.5rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}

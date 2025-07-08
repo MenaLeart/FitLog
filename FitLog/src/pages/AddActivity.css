@@ -1,0 +1,98 @@
+.exercise-accordion {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1rem;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+}
+
+.day-section {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.day-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.day-header:hover {
+  background-color: #fafafa;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.exercise-item {
+  padding: 0.8rem 1.2rem;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.exercise-item:hover {
+  background-color: #f9f9f9;
+}
+
+.exercise-item.selected {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.checkmark {
+  color: #444;
+}
+
+.buttonsave {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #71d5cd;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+  border-color: #71d5cd;
+  box-shadow: 0 0 5px rgba(113, 213, 205, 0.5);
+}

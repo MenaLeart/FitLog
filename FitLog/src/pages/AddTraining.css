@@ -1,0 +1,97 @@
+.training-container {
+  background-image: url("/background2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem 1rem 6rem 1rem;
+  transition: margin-right 0.3s ease;
+  position: relative;
+  color: black;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.sidebar-shifted {
+  margin-right: 80px;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.training-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.training-box {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  align-items: flex-start;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+  border-color: #71d5cd;
+  box-shadow: 0 0 5px rgba(113, 213, 205, 0.5);
+}
+
+.weight-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weight-input span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.buttonsave {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #71d5cd;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}

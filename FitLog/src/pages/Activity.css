@@ -1,0 +1,122 @@
+.home-container {
+  background-image: url("/background2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem 1rem 6rem 1rem;
+  transition: margin-right 0.3s ease;
+  position: relative;
+  color: black;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.sidebar-shifted {
+  margin-right: 80px;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.activity-box {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  margin: 0;
+}
+
+.activity-content {
+  flex: 1;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.activity-box h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.activity-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: left;
+}
+
+.activity-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.delete-activity-icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 22px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-activity-icon:hover {
+  color: #d9534f;
+}
+
+.addtraining {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+.addtraining-text {
+  color: #75cdc8;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.no-training-text {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #888;
+  text-align: left;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    padding: 2rem 5rem;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.activity-box:hover {
+  background-color: #f9f9f9;
+}

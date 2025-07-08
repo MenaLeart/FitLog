@@ -1,0 +1,175 @@
+.home-container {
+  background-image: url("/background2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem 1rem 6rem 1rem;
+  transition: margin-right 0.3s ease;
+  position: relative;
+  color: black;
+  overflow-y: auto;
+}
+
+.sidebar-shifted {
+  margin-right: 80px;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.home-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .home-container {
+    padding: 2rem 5rem;
+  }
+}
+
+.home-box {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-box.weight-box {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-box h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.home-box p {
+  margin: 0.4rem 0;
+}
+
+.home-box span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.home-box button {
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  background-color: #71d5cd;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.weight-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 130px;
+  gap: 0.4rem;
+}
+
+.weight-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 18%; /* <--- Hier wird die Balkenbreite gesteuert */
+}
+
+.weight-bar {
+  width: 100%;
+  background-color: #71d5cd;
+  border-radius: 6px 6px 0 0;
+}
+
+.weight-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+}
+
+.weight-date {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.daily-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.daily-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.daily-icon {
+  font-size: 48px;
+  color: #333;
+}
+
+.daily-label {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.3rem;
+}
+
+.goal-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.goal-label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.goal-value {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  background-color: #71d5cd;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .top-right-toggle {
+    display: none;
+  }
+}
