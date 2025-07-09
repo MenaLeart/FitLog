@@ -11,6 +11,7 @@ import {
   eggOutline,
   cameraOutline,
   imagesOutline,
+  chevronForwardOutline,
 } from "ionicons/icons";
 import Sidebar from "../components/Sidebar";
 import BottomNavigation from "../components/BottomNavigation";
@@ -122,7 +123,10 @@ const Home: React.FC = () => {
 
           <div className="home-grid">
             <div className="home-box clickable" onClick={handleGoalClick}>
-              <h3>GOALS</h3>
+              <div className="goal-header">
+                <h3>GOALS</h3>
+                <IonIcon icon={chevronForwardOutline} className="goal-arrow" />
+              </div>
               <div className="goal-item-row">
                 <div className="goal-label">Weight</div>
                 <div className="goal-value">{goal?.targetWeight ?? "?"}kg</div>

@@ -173,3 +173,21 @@
     display: none;
   }
 }
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.goal-header h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.goal-arrow {
+  font-size: 1.4rem;
+  color: #888;
+}
