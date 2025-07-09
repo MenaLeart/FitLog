@@ -41,19 +41,14 @@ export class StorageService {
 
   static addWeight(entry: WeightEntry): void {
     const logs = StorageService.loadWeights();
-
-    // Kein Eintrag vorhanden ⇒ einfach hinzufügen
     if (logs.length === 0) {
       logs.push(entry);
     } else {
       const last = logs[logs.length - 1];
-
-      // Nur hinzufügen, wenn Gewicht oder Datum sich unterscheidet
       if (last.weight !== entry.weight || last.date !== entry.date) {
         logs.push(entry);
       }
     }
-
     localStorage.setItem(WEIGHT_LOGS_KEY, JSON.stringify(logs));
   }
 
@@ -71,25 +66,13 @@ export class StorageService {
   static updateTraining(index: number, entry: TrainingEntry): void {
     const entries = StorageService.loadTrainings();
     entries[index] = entry;
-    localStorage.setItem("fitlog_trainings", JSON.stringify(entries));
-  }
-
-  static updateActivity(index: number, entry: ActivityEntry): void {
-    const entries = StorageService.loadActivities();
-    entries[index] = entry;
-    localStorage.setItem("fitlog_activities", JSON.stringify(entries));
+    localStorage.setItem(TRAINING_KEY, JSON.stringify(entries));
   }
 
   static deleteTraining(index: number): void {
     const entries = StorageService.loadTrainings();
     entries.splice(index, 1);
-    localStorage.setItem("fitlog_trainings", JSON.stringify(entries));
-  }
-
-  static deleteActivity(index: number): void {
-    const entries = StorageService.loadActivities();
-    entries.splice(index, 1);
-    localStorage.setItem(ACTIVITY_KEY, JSON.stringify(entries));
+    localStorage.setItem(TRAINING_KEY, JSON.stringify(entries));
   }
 
   static loadTrainings(): TrainingEntry[] {
@@ -103,15 +86,20 @@ export class StorageService {
     localStorage.setItem(ACTIVITY_KEY, JSON.stringify(entries));
   }
 
+  static updateActivity(index: number, entry: ActivityEntry): void {
+    const entries = StorageService.loadActivities();
+    entries[index] = entry;
+    localStorage.setItem(ACTIVITY_KEY, JSON.stringify(entries));
+  }
+
+  static deleteActivity(index: number): void {
+    const entries = StorageService.loadActivities();
+    entries.splice(index, 1);
+    localStorage.setItem(ACTIVITY_KEY, JSON.stringify(entries));
+  }
+
   static loadActivities(): ActivityEntry[] {
     const json = localStorage.getItem(ACTIVITY_KEY);
     return json ? JSON.parse(json) : [];
-  }
-
-  static clearAll(): void {
-    localStorage.removeItem(GOAL_KEY);
-    localStorage.removeItem(WEIGHT_LOGS_KEY);
-    localStorage.removeItem(TRAINING_KEY);
-    localStorage.removeItem(ACTIVITY_KEY);
   }
 }

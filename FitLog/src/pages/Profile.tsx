@@ -12,7 +12,7 @@ const Profile: React.FC = () => {
   const history = useHistory();
 
   const handleLogout = () => {
-    // Optional: z.B. StorageService.clear()
+    localStorage.setItem("fitlog_logged_in", "false"); // ← Login-Status zurücksetzen
     history.push("/login");
   };
 

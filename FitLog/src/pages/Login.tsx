@@ -4,8 +4,9 @@ import {
   IonInput,
   IonButton,
   IonItem,
+  IonToast,
 } from "@ionic/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./Login.css";
 
@@ -13,12 +14,21 @@ const Login: React.FC = () => {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showError, setShowError] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("fitlog_logged_in");
+    if (stored === "true") {
+      history.replace("/home");
+    }
+  }, [history]);
 
   const handleLogin = () => {
-    if (email && password) {
-      history.push("/home");
+    if (email.trim() && password.trim()) {
+      localStorage.setItem("fitlog_logged_in", "true");
+      history.replace("/home");
     } else {
-      alert("Bitte E-Mail und Passwort eingeben");
+      setShowError(true);
     }
   };
 
@@ -57,14 +67,28 @@ const Login: React.FC = () => {
 
             <div className="signup-link">
               <p>
-                Dont have an account?{" "}
-                <a href="/signup">
-                  <strong>Sign up</strong>
+                Noch kein Konto?{" "}
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    history.push("/signup");
+                  }}
+                >
+                  <strong>Registrieren</strong>
                 </a>
               </p>
             </div>
           </div>
         </div>
+
+        <IonToast
+          isOpen={showError}
+          onDidDismiss={() => setShowError(false)}
+          message="Bitte E-Mail und Passwort eingeben"
+          duration={2000}
+          color="danger"
+        />
       </IonContent>
     </IonPage>
   );

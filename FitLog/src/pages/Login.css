@@ -6,12 +6,15 @@
   height: 100vh;
 }
 
-/* Zentrierter Wrapper */
+/* Zentrierter Wrapper (wird mittig ausgerichtet) */
 .login-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  max-width: 360px;
+  margin: auto;
 }
 
 /* Logo oben */
@@ -27,7 +30,7 @@
   background: white;
   padding: 2rem;
   border-radius: 25px;
-  width: 85%;
+  width: 100%;
   max-width: 320px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: center;
@@ -53,15 +56,7 @@ ion-input {
 }
 
 .login-input ion-input {
-  color: black; /* Text sichtbar machen */
-}
-
-.login-input {
-  --border-radius: 20px;
-  --background: white;
-  --color: black;
-  --padding-start: 16px;
-  border-radius: 20px; /* wichtig für IonItem */
+  color: black;
 }
 
 .login-button {

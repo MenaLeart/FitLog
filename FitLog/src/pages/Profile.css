@@ -1,70 +1,136 @@
-.home-container {
-  background-image: url("/background2.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding: 2rem 1rem 6rem 1rem;
-  transition: margin-right 0.3s ease;
-  position: relative;
-  color: black;
-  overflow-y: auto;
-  text-align: left;
+* Volle Höhe für App */ html,
+body,
+ion-app,
+ion-content,
+ion-page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.sidebar-shifted {
-  margin-right: 80px;
+/* Hintergrund & Zentrierung */
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  padding: 1rem;
+  background: linear-gradient(to bottom, #e0fdfc, #ffffff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Zentrierter Wrapper */
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+}
+
+/* Logo */
+.login-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+/* Login-Karte */
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.login-input ion-input {
+  color: black;
+  text-align: center; /* hier mittig */
+}
+
+/* Eingabefelder */
+ion-item.login-input {
+  --background: white;
+  --border-radius: 25px;
+  --inner-border-radius: 25px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --highlight-color-focused: #5dd4c8;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  height: 48px;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Eingabetext */
+ion-input {
+  font-size: 16px;
+}
+
+.login-input ion-input {
+  color: black;
+}
+
+/* Login-Button */
+.login-button {
+  --background: #75cdc8;
+  --color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  margin-top: 1rem;
+  text-transform: none;
+}
+
+/* Link unten */
+.signup-link {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.signup-link a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.profile-container {
+  padding: 1rem;
+  margin-top: 3rem;
 }
 
 .welcome-text {
-  font-size: 2rem;
+  text-align: left;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  text-align: left;
 }
 
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.box {
+.profile-box {
   background: white;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  align-items: flex-start;
-}
-
-.profile-box h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.profile-box p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #444;
-  text-align: left;
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .buttonsave {
-  margin-top: 1rem;
-  padding: 0.6rem 1rem;
-  background-color: #75cdc8;
-  border: none;
-  border-radius: 8px;
   color: white;
-  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 1rem;
   cursor: pointer;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .home-container {
-    padding: 2rem 5rem;
-  }
 }
